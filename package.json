@@ -9,7 +9,7 @@
         "email": "contact@luuxis.fr",
         "url": "https://github.com/luuxis"
     },
-    "url": "http://launcher.luuxis.fr",
+    "url": "http://oka.nowh.fun",
     "engines": {
         "node": "^18.x.x"
     },
@@ -41,6 +41,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/craft-launch/PokeMoonX-Launcher.git"
+        "url": "git+https://github.com/luuxis-fiverr/OkaClient-Launcher.git"
     }
 }
