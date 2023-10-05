@@ -1,0 +1,46 @@
+{
+    "name": "OkaClient-Launcher",
+    "preductname": "OkaClient Launcher",
+    "version": "1.0.0",
+    "description": "Launcher Minecraft PvP Optimisé",
+    "main": "src/app.js",
+    "author": {
+        "name": "luuxis, Inc.",
+        "email": "contact@luuxis.fr",
+        "url": "https://github.com/luuxis"
+    },
+    "url": "http://launcher.luuxis.fr",
+    "engines": {
+        "node": "^18.x.x"
+    },
+    "scripts": {
+        "start": "cross-env-shell NODE_ENV=dev electron .",
+        "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
+        "build": "node build.js --obf=true --build=platform",
+        "icon": "node build.js --icon=https://cdn.discordapp.com/attachments/1141754756214308864/1156615821704048750/oka-logo-t-29.png"
+    },
+    "license": "CCANC",
+    "nodemonConfig": {
+        "ext": "js,html,css",
+        "ignore": "**/test"
+    },
+    "dependencies": {
+        "electron-updater": "^6.1.1",
+        "minecraft-java-core": "^3.7.2",
+        "node-bdd": "^2.0.3",
+        "node-fetch": "^2.6.13"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "electron": "^26.0.0",
+        "electron-builder": "^24.6.3",
+        "javascript-obfuscator": "^4.0.2",
+        "jimp": "^0.22.10",
+        "nodemon": "^3.0.1",
+        "png2icons": "^2.0.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/craft-launch/PokeMoonX-Launcher.git"
+    }
+}
