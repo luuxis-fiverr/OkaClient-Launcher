@@ -59,7 +59,7 @@ class Settings {
                     })
 
                     if (id == 'add') {
-                        document.querySelector('.cancel-home').style.display = 'inline'
+                        document.querySelectorAll('.cancel-login').forEach(e => e.style.display = 'inline')
                         return changePanel('login')
                     }
 

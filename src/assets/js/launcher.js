@@ -147,7 +147,7 @@ class Launcher {
                         color: 'var(--color)',
                         background: false
                     });
-                    
+
                     let refresh_accounts = await new Microsoft(this.config.client_id).refresh(account);
 
                     if (refresh_accounts.error) {
@@ -200,7 +200,9 @@ class Launcher {
                         let refresh_accounts = await Mojang.login(account.name);
 
                         refresh_accounts.ID = account_ID
+                        await addAccount(refresh_accounts)
                         this.db.updateData('accounts', refresh_accounts, account_ID)
+                        if (account_ID == account_selected) accountSelect(refresh_accounts)
                         continue;
                     }
 
