@@ -88,6 +88,10 @@ class Home {
                     </div>`
             newsElement.appendChild(blockNews);
         }
+
+        document.querySelector('.close-popup-news').addEventListener('click', e => {
+           document.querySelector('.news-popup').style.display = 'none'
+        })
     }
 
     socialLick() {
@@ -95,7 +99,8 @@ class Home {
 
         socials.forEach(social => {
             social.addEventListener('click', e => {
-                shell.openExternal(e.target.dataset.url)
+                if (e.target.dataset.url == 'news') document.querySelector('.news-popup').style.display = 'flex'
+                else shell.openExternal(e.target.dataset.url)
             })
         });
     }
